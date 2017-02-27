@@ -6,7 +6,7 @@
 
 This practical focuses on file handling and using HashMaps
 
-### Word  frequency
+### Level 1: Word  frequency
 
 Relative word frequency in texts is a simple way of identifying the type of text
 involved.
@@ -30,10 +30,10 @@ the text. The word should be passed as a parameter and the method
 should return 0 if the word does not occur.
 * find the relative frequency of a word i.e. the frequency divided by the
 total number of words in the text.
-* create an object of type _WordFrequency_ from a file with a name specified in a parameter. Rather than a constructor, this should be a static method called `makeInstance` which returns an object of type _WordFrequency_.
+* create an object of type _WordFrequency_ from a file with a name specified in a parameter. Rather than a constructor, this should be a static method called `makeInstance` which returns an object of type _WordFrequency_. This know as a factory method, which you can read about here <http://www.informit.com/articles/article.aspx?p=1216151>
 
 
-###Word frequency by document type
+###Level 2: Word frequency by document type
 
 Different types of documents tend to have different relative frequencies. Next
 we are going to try to guess the type of document based on the relative
@@ -45,8 +45,8 @@ the documents.
 We want to record the overall word frequencies of the two types of documents
 and store them in the class. Define a static variable `typeFrequency` which is
 a map from document type (represented as a String e.g. `Coldplay`) to
-_WordFrequency_. Add a method `classifyAs` which takes the document type
-as a parameter and updates the `typeFrequency` variable.
+_WordFrequency_. Add a static method `classifyAs` which takes the document type
+and a text as parameter and updates the `typeFrequency` variable with the word frequencies associated with the given text, in addition to any word frequencies already recorded for that type of text.
 
 Write a static method which includes a range of examples of each document
 types, creates the corresponding _WordFrequency_ object and classifies them 
@@ -63,7 +63,7 @@ have a smarter idea. Once you can find the distance between two
 WordFrequency objects you can try to guess the type of a piece of text by
 finding the WordFrequency in the `typeFrequency` map which is closest to the
 given text. This should be wrapped up in a static method which takes a String
-(the text to be guessed) and returns an ordered list of `String` (the types of the text ranked according to similarity of word frequency). The quickest way to do this is to use the `Comparator` interface and the `sort` method from the `Collections` class.
+(the text to be guessed) and returns an ordered list of `String` (the types of the text ranked according to similarity of word frequency). The quickest way to do this is to use the `Comparator` interface and the `sort` method from the `Collections` class (see lecture notes on Using interfaces for max and sorting).
 
 Try this out and see if your program can guess what type if text it is looking at.
 Does it matter how many example texts you give it? Can it tell between three
