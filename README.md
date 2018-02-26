@@ -1,6 +1,6 @@
-#Introduction to Programming
+# Introduction to Programming
 
-##Practical: HashMaps and File Handling
+## Practical: HashMaps and File Handling
 
 ## Instructions
 
@@ -33,7 +33,7 @@ total number of words in the text.
 * create an object of type _WordFrequency_ from a file with a name specified in a parameter. Rather than a constructor, this should be a static method called `makeInstance` which returns an object of type _WordFrequency_. This know as a factory method, which you can read about here <http://www.informit.com/articles/article.aspx?p=1216151>
 
 
-###Level 2: Word frequency by document type
+### Level 2: Word frequency by document type
 
 Different types of documents tend to have different relative frequencies. Next
 we are going to try to guess the type of document based on the relative
